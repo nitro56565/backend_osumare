@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Task</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
     <form method="post" action="/tasks/<%=task.id%>?_method=PUT">
-        <h1>Edit Your Task</h1>
+        <h1 class="header">Edit Your Task</h1>
         <h3>Title: </h3>
         <input type="text" name="title" value="<%=task.title%>">
         <h3>Description: </h3>
         <textarea rows="10" cols="55" name="description"><%=task.description%></textarea><br><br>
-        <button>Submit</button>
+        <button class="button-props">Submit</button>
     </form>
 </body>
 </html>

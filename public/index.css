@@ -11,3 +11,51 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.button-props{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 0.6em;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+
+.index-btn{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.bottom-tab{
+    display: flex;
+    height: 100%;
+    align-content: end;
+    justify-content: center;
+}
+#go-back{
+    display: flex;
+    justify-content: center;
+    margin-left: 37rem;
+}

@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List Home</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <button class="button-props" id="new-task-btn"><a href="http://localhost:8080/tasks/new">Add New Task</a></button>
+    <h1 class="header">To-Do List</h1>
+    <div class="index-btn">
+        <button class="button-props" id="new-task-btn"><a href="http://localhost:8080/tasks/new">Add New Task</a></button>
+    </div>
     <div class="content-box">
         <% for(task of tasks) { %>
             <div class="task-box">
                 <h3><%= task.title %></h3>
                 <p><%= task.description %></p>
-                <button><a href="http://localhost:8080/tasks/<%=task.id%>">View</a></button>
-                <button><a href="http://localhost:8080/tasks/<%=task.id%>/edit">Edit</a></button>
-                <form method="post" action="/tasks/<%=task.id%>?_method=DELETE">
-                    <button>Delete Task</button>
-                </form>
+                <div class="bottom-tab">
+                    <button class="button-props"><a href="http://localhost:8080/tasks/<%=task.id%>">View</a></button>
+                    <button class="button-props"><a href="http://localhost:8080/tasks/<%=task.id%>/edit">Edit</a></button>
+                    <form class="bottom-tab" method="post" action="/tasks/<%=task.id%>?_method=DELETE">
+                        <button class="button-props">Delete Task</button>
+                    </form>
+                </div>
             </div>
         <%}%>
     </div>
